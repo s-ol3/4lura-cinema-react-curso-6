@@ -1,16 +1,11 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
-import AppRoutes from './routes';
 
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
-
   <React.StrictMode>
-
-    <AppRoutes/>
-    
+    <h1>React App -ALURA CINEMA, curso 6</h1>
   </React.StrictMode>
 );
-
