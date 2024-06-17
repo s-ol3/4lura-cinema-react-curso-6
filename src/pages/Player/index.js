@@ -11,14 +11,15 @@ function Player(){
 
 const parametros = useParams()
 useEffect(()=>{
-    fetch(`https://my-json-server.typicode.com/DaniRiverol/alura-cinema-api/videos?id=${parametros.id}`)
+    //fetch(`https://my-json-server.typicode.com/DaniRiverol/alura-cinema-api/videos?id=${parametros.id}`)
+    fetch(`https://my-json-server.typicode.com/s-ol3/4lura-cinema-react-curso-6-api/videos?id=${parametros.id}`)
     .then(response=>response.json())
     .then(data=>{
-        setVideo(...data)
+        setVideo(...data)           //''en la línea 17 porque estamos trayendo un objeto entonces lo que vamos a hacer con ese objeto es desparramarlo (poner ... antes ) a través del split operator entonces todos los elementos o todas las propiedades de este data o de este objeto ahora les vamos a traer por separado las vamos a desparramar ''
     })
  },[])   
 
-//const video = videos.find(video=> video.id === Number(parametros.id))
+//const video = videos.find(video=> video.id === Number(parametros.id))   ', no la vamos a estar utilizando, luego la podemos borrar pero para que veamos de dónde viene cada cosa'
 console.log(video);
 if(!video)return <NotFound/>
     return(
